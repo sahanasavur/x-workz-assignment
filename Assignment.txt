@@ -1,0 +1,205 @@
+1.What is the difference between compile time and runtime?
+==>The compailetime is the Programming term Which is performs compliation of the code written by the Programmer.and it convertes source code into byte code.
+   Runtime is the time where Byte code is running using JRE it refers to Java Runtime Environment Bytecode can be Exicuted.
+ 
+ 
+ 2.Explain types of variables with example.
+==>
+String - stores text, such as "JAVA". ...
+ 
+int - stores integers, without decimals,from 128 to -127.
+
+float - stores floating point numbers, with decimals, ex 55.000000
+
+char - stores single characters, such as  'S'.
+ 
+
+ 3.Write example to convert string to primitive(8)
+ ==>
+ public class Data
+    {
+    public static void main(String[] args)
+    {
+	byte sun=1;
+	sun=1;
+    System.out.println(sun);
+	
+	short  minutesInADay;
+	minutesInADay=1440;
+	System.out.println(minutesInADay);
+	
+    int itEmployesInBangaluru;
+	itEmployesInBangaluru = 1500000;
+	System.out.println(itEmployesInBangaluru);
+	
+	long areaOfEarth;
+	areaOfEarth=510100000;
+	System.out.println(areaOfEarth);
+	
+	float ratingOfAMovie;
+	ratingOfAMovie =9.2f;
+    System.out.println(ratingOfAMovie);
+	
+	double speedOfLight;
+	speedOfLight= 300000000;
+	System.out.println(speedOfLight);
+	
+	boolean sugarIssweet;
+	sugarIssweet= true;
+	System.out.println(sugarIssweet);
+	
+	char tea='t';
+	tea='t';
+	System.out.println(tea);
+	
+  	String flower;
+	flower = "Lilly";
+    System.out.println(flower);
+	
+  }
+}
+
+
+  
+ 
+ 
+ 4.Explain method, parameter, argument and return types with example
+ 
+==>
+
+* method:- A Java method is a collection of statements that are grouped together to perform an operation.
+           A method is a block of code which only runs when it is called.
+		    Syntax:public static int methodName(int a, int b) 
+			{
+                 // body
+            }
+				
+
+* parameter: Parameters act as variables inside the method.
+              Parameters are specified after the method name, inside the parentheses.
+			  
+* argument: An argument is a value passed to a function when the function is called.
+             Whenever any function is called during the execution of the program there are some values passed with the function. These values are called arguments.
+			 
+* return types: return keyword is used to complete the execution of a method.
+                 A return statement causes the program control to transfer back to the caller of a method.
+				 return type may be a primitive type like int, float, double, a reference type or void type.
+				 
+				 
+				 
+				 
+5.What is Encapsulation? Explain with an example
+==>We hide the data members(field).We provide access using methods.
+Using access Specifiers we achieve encapsulation in java.
+   
+   
+   	    public class Thief
+		  {
+              public static void steal()
+              {
+	            System.out.println("invoked steal");
+	            double pocket=Reliance.getBudget();
+	            System.out.println("steal budget "+pocket);
+	            System.out.println("Reliance budget "+Reliance.getBudget());
+	            System.out.println("EXIT :: steal");
+	          }
+        }
+		  
+        ThiefTester.java
+		  
+		  public class ThiefTester
+		  {
+             public static void main(String[] runT)
+             {
+                System.out.println("JVM invoked main");
+		        Thief.steal();
+                System.out.println("EXIT :: main");
+             }	
+	      }
+	
+
+6.Explain array with example.
+ 
+ ==>Array is a Collection of Elements which can store a fixed-size collection of elements of the same data type.
+ 
+
+
+
+7.Write code to display elements of an array?
+
+   public class Array 
+{
+    public static void main(String[] args) 
+	{
+        String[] array = {ECE,CSE,EEE,CV};
+
+        System.out.println(Arrays.toString(array));
+    }
+}
+
+
+8.Explain Method overloading with two example.
+  
+  Two Methods having same Signature but different in Parameters.
+  
+  
+ EX:
+ public class School
+{	
+	public static void bell(String bench)
+	{
+		System.out.println("invoked bell");
+		System.out.println("arg bench : " +bench);		
+	}	
+	
+	public static void bell(String chalk,String board)
+	{
+		System.out.println("invoked holding with two parameters ");
+		System.out.println("byte and String");
+		System.out.println("arg1 chalk :" +chalk);
+		System.out.println("arg2 board :" +board);
+    }
+	
+	public static void bell(byte chalk,String board)
+	{
+		System.out.println("invoked holding with two parameters ");
+		System.out.println("byte and String");
+		System.out.println("arg1 chalk :" +chalk);
+		System.out.println("arg2 board :" +board);
+    }
+
+	public static void bell(int chalk,String board)
+	{
+		System.out.println("invoked holding with two parameters ");
+		System.out.println("int and String");
+		System.out.println("arg1 chalk :" +chalk);
+		System.out.println("arg2 board :" +board);
+    }
+	
+}
+
+
+public class SchoolTester
+{
+    public static void main(String[] set)
+    {
+	    System.out.println("JVM invoked main");	
+	    System.out.println("main method set length :" +set.length);	
+        
+	    String test="song";
+		School.bell(test);
+
+		School.bell(test,"pen");
+		
+	    School.bell(1,test);
+		
+		School.bell(500000,test);
+		
+	    System.out.println("EXIT :: main");	
+		
+    }
+
+}
+	
+	
+	
